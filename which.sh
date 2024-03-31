@@ -49,7 +49,7 @@ while [[ $# -ne 0 ]]; do
   if [[ $found_local = true ]]; then
     found=$((found+1))
   else
-    echo "which: $1: Program not found."
+    echo "which: $1: Command not found."
   fi
 
   shift
