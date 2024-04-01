@@ -6,11 +6,11 @@ section .data
 
 section .text
 _start:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, msg
-    mov rdx, len
+    lea rax, 4
+    lea rdi, 1
+    lea rsi, msg
+    lea rdx, len
     syscall
-    mov rax, 60
-    mov rdi, 0
+    lea rax, 1
+    lea rdi, 0
     syscall

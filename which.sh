@@ -36,7 +36,7 @@ while [[ $# -ne 0 ]]; do
   IFS=':'
   for p in $PATH; do
     prog="$p/$1"
-    if [[ -f "$prog" ]]; then
+    if [[ -x "$prog" ]]; then
       echo "$prog"
       found_local=true
       if [[ $lookonce = true ]]; then

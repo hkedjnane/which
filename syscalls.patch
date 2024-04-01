@@ -1,15 +1,9 @@
 diff --git a/sys/sys/syscall_mi.h b/sys/sys/syscall_mi.h
-index 8ed88774d8a..f89af98a013 100644
+index db457616830..e6d88743209 100644
 --- a/sys/sys/syscall_mi.h
 +++ b/sys/sys/syscall_mi.h
-@@ -162,8 +162,8 @@ mi_syscall(struct proc *p, register_t code, const struct sysent *callp,
- 	    uvm_map_inentry_sp, p->p_vmspace->vm_map.sserial))
- 		return (EPERM);
- 
+@@ -168,2 +168,2 @@ mi_syscall(struct proc *p, register_t code, const struct sysent *callp,
 -	if ((error = pin_check(p, code)))
 -		return (error);
 +	//if ((error = pin_check(p, code)))
 +	//	return (error);
- 
- 	pledged = (p->p_p->ps_flags & PS_PLEDGE);
- 	if (pledged && (error = pledge_syscall(p, code, &tval))) {
